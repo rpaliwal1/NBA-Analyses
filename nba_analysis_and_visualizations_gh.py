@@ -25,12 +25,10 @@ def data_manipulation():
 
 	# Create 'Season' column from DateTime object
 	def get_season(col):
-		if col.year == 2000:
-			return 2001
-		elif col.month < 5:
-			return col.year
-		else:
+		if col.month > 9:
 			return col.year + 1
+		else:
+			return col.year
 
 	df['Season'] = df['Date'].apply(get_season)
 		
