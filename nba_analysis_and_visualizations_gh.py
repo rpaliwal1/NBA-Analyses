@@ -44,7 +44,7 @@ def data_manipulation():
 		2: 'February',
 		3: 'March',
 		4: 'April'
-					}
+	}
 
 	df['Month'] = df['Month'].apply(lambda m: month_dict.get(m))
 
