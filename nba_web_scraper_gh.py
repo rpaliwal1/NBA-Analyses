@@ -27,25 +27,25 @@ games_played = {			# Dictionary where key = season, value = # of regular season 
 '16': 82}
 
 # Regex to parse out time, score, play, and location of shot. Home vs Away games appear differently in the source code.
-regex_home = re.compile(r'''<td>(\d{1,2}:\d{2}\.\d)</td>		# Time
+regex_home = re.compile(r'''<td>(\d{1,2}:\d{2}\.\d)</td>				# Time
 						\n(.*)<td\sclass=(.*)>
-						(\d{1,3}-\d{1,3})</td>					# Score
-						(.*)(K\.\sBryant)</a>					# Player name
-						\s((misses|makes)						# Miss or make
-						\s(\d-pt\sshot|							# 2 or 3 pt shot
+						(\d{1,3}-\d{1,3})</td>			# Score
+						(.*)(K\.\sBryant)</a>			# Player name
+						\s((misses|makes)			# Miss or make
+						\s(\d-pt\sshot|				# 2 or 3 pt shot
 						(technical\s|flagrant\s)?free\sthrow))	# Free throw
-						(.*?)</td>								# Location
+						(.*?)</td>				# Location
 						''', re.VERBOSE)
 
-regex_away = re.compile(r'''<td>(\d{1,2}:\d{2}\.\d)</td>		# Time
+regex_away = re.compile(r'''<td>(\d{1,2}:\d{2}\.\d)</td>				# Time
 						\n(.*)<td\sclass=(.*)>
-						(K\.\sBryant)</a>						# Player name
-						\s((misses|makes)						# Miss or make
-						\s(\d-pt\sshot|							# 2 or 3 pt shot
+						(K\.\sBryant)</a>			# Player name
+						\s((misses|makes)			# Miss or make
+						\s(\d-pt\sshot|				# 2 or 3 pt shot
 						(technical\s|flagrant\s)?free\sthrow))	# Free throw
-						(.*?)									# Location
+						(.*?)					# Location
 						</td><td\sclass=(.*)>
-						(\d{1,3}-\d{1,3})						# Score
+						(\d{1,3}-\d{1,3})			# Score
 						''', re.VERBOSE)
 
 # Using the player overview page, scrape each game log URL (1 per season)
