@@ -24,7 +24,8 @@ games_played = {			# Dictionary where key = season, value = # of regular season 
 '13': 82,					# Starting with 2013 season, basketball-reference lists all 82 games (it will list inactive for games not played)
 '14': 82,
 '15': 82,
-'16': 82}
+'16': 82
+}
 
 # Regex to parse out time, score, play, and location of shot. Home vs Away games appear differently in the source code.
 regex_home = re.compile(r'''<td>(\d{1,2}:\d{2}\.\d)</td>				# Time
