@@ -21,7 +21,7 @@ games_played = {			# Dictionary where key = season, value = # of regular season 
 '10': 73,
 '11': 82,
 '12': 58,
-'13': 82,					# Starting with 2013 season, basketball-reference lists all 82 games (it will list inactive for games not played)
+'13': 82,				# Starting with 2013 season, basketball-reference lists all 82 games (it will list inactive for games not played)
 '14': 82,
 '15': 82,
 '16': 82
