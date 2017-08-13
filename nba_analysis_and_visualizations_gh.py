@@ -153,7 +153,7 @@ def heatmap():
 	# Heatmap by Attempted Shots
 	# Sort dataframe on 'Distance' for heatmap
 	df['Distance'] = pd.Categorical(df['Distance'],
-								   categories=['2-5','6-10','11-15','16-20','21-25','26-30','31+'])
+					categories=['2-5','6-10','11-15','16-20','21-25','26-30','31+'])
 	df.sort_values('Distance')
 
 	# Group By for Heatmap
