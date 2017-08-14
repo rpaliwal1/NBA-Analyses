@@ -28,7 +28,8 @@ games_played = {			# Dictionary where key = season, value = # of regular season 
 }
 
 # Regex to parse out time, score, play, and location of shot. Home vs Away games appear differently in the source code.
-regex_home = re.compile(r'''<td>(\d{1,2}:\d{2}\.\d)</td>				# Time
+regex_home = re.compile(r'''
+						<td>(\d{1,2}:\d{2}\.\d)</td>		# Time
 						\n(.*)<td\sclass=(.*)>
 						(\d{1,3}-\d{1,3})</td>			# Score
 						(.*)(K\.\sBryant)</a>			# Player name
@@ -38,7 +39,8 @@ regex_home = re.compile(r'''<td>(\d{1,2}:\d{2}\.\d)</td>				# Time
 						(.*?)</td>				# Location
 						''', re.VERBOSE)
 
-regex_away = re.compile(r'''<td>(\d{1,2}:\d{2}\.\d)</td>				# Time
+regex_away = re.compile(r'''
+						<td>(\d{1,2}:\d{2}\.\d)</td>		# Time
 						\n(.*)<td\sclass=(.*)>
 						(K\.\sBryant)</a>			# Player name
 						\s((misses|makes)			# Miss or make
